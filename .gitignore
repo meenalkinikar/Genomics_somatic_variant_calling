@@ -1,0 +1,6 @@
+*.fastq.gz
+*.bam
+*.vcf.gz
+reference/
+results/
+aligned/
