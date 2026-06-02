@@ -57,7 +57,8 @@
 # Intervals list
 # wget https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/exome_calling_regions.v1.1.interval_list ~/Desktop/demo/supporting_files/mutect2_supporting_files
 
-
+# ensemble vep download
+# wget https://ftp.ensembl.org/pub/release-115/variation/indexed_vep_cache/homo_sapiens_vep_115_GRCh38.tar.gz --2026-05-31 10:50:03--  https://ftp.ensembl.org/pub/release-115/variation/indexed_vep_cache/homo_sapiens_vep_115_GRCh38.tar.gz
 
 #--------------------------------------------------------------------------#
 
@@ -152,4 +153,4 @@ data_source_path=/mnt/d/courses/genomics_tut/ensembl_vep/
 # conda install -c bioconda ensembl-vep
 # vep_install -a cf -s homo_sapiens -y GRCh38 -c ~/vep_data
 
-# vep -i ${results}/filtered_somatic_variants_mutect2.vcf -o ${results} annotated.vep.vcf --cache --dir_cache ${data_source_path} --assembly GRCh38 --vcf
+ vep -i ${results}/filtered_somatic_variants_mutect2.vcf -o ${results}/annotated.vep.vcf --cache --dir_cache ${data_source_path} --assembly GRCh38 --vcf
